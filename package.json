@@ -1,0 +1,36 @@
+{
+  "name": "MeditationApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ./server/__tests__ --env=node --forceExit",
+    "coveralls": "jest ./server/__tests --env=node --forceExit --coverage --coverageReporters=text-lcov  | coveralls",
+    "start": "node ./server/server",
+    "client": "npm run start --prefix client",
+    "server": "nodemon ./server/server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^6.5.0",
+    "axios": "^0.19.1",
+    "bcryptjs": "^2.4.3",
+    "coveralls": "^3.0.9",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.7",
+    "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-jwt": "^4.0.0",
+    "stripe": "^8.4.0",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.2",
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.2"
+  }
+}

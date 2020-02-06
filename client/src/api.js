@@ -1,0 +1,21 @@
+export default {
+  login: "/api/auth/local/login",
+  register: "/api/auth/local/register",
+  resetPassword: "/api/auth/local/password_reset",
+  newPassword: "/api/auth/local/password_new",
+  courseData: "/api/course",
+  meditationData: "/api/meditation",
+  userMeditation: "/api/meditation_user",
+  badgeData: "/api/badges",
+  setCourse: "/api/course/start",
+  addCourse: "/api/course/add",
+  updateMeditationTime: "/api/course/meditation_update",
+  returnUserMeditation: "/api/course/return_meditation",
+  updateCurrentMeditation: "/api/course/update-meditation",
+  //getVideo: "/api/meditation_getVideo",
+  donation: "/api/donation",
+  getUser: "/api/account/get-user",
+  updateEmail: "/api/account/update-email",
+  deactivateAccount: "/api/account/deactivate-account",
+  checkBadges: "/api/account/check-badges"
+};

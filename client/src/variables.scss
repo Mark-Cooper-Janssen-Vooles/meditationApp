@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-link-color: rgb(84, 84, 84);
+  --main-link-hover: rgba(84, 84, 84, 0.5); 
+  --main-background: rgba(84, 84, 84, 0.1);  
+  --main-border: solid 2px rgba(84, 84, 84, 0.1);
+  --purple-color: rgba(22, 0, 148, 0.75);
+  --popup-background: rgb(215, 215, 215);
+  --popup-background2: rgb(22, 0, 148);
+}
+
+// var(--main-link-color)
+// var(--main-link-hover)
+// var(--main-border)

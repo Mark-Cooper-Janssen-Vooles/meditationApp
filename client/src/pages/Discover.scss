@@ -1,0 +1,57 @@
+.discover-content {
+  display: flex;
+  .left-select-content {
+    height: 100%;
+    width: 35%;
+    // background: red;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+
+    .course-link-active {
+      color: var(--purple-color);
+      &:hover {
+        cursor:pointer;
+      }
+    }
+    .course-link:hover {
+      cursor: pointer;
+    }
+
+    .badge-link-active {
+      color: var(--purple-color);
+      &:hover {
+        cursor:pointer;
+      }
+    }
+    .badge-link:hover {
+      cursor: pointer;
+    }
+  }
+  
+  .right-display-content {
+    height: 100%;
+    width: 57.5%;
+    margin-right: 2.5%;
+    // background: blue;
+
+    .picture-content {
+      display: flex;
+      width: 80%;
+      // height: 100%;
+      background: var(--main-link-color);
+      border-radius: 25px;
+      .course-image {
+        width: 100%;
+        opacity: 0.9;
+        filter: alpha(opacity=50);
+      }
+    }
+
+    .badge-image {
+      width: 50%;
+      border-radius: 25px;
+      opacity: 0.5;
+      filter: alpha(opacity=50);
+    }
+  }
+}

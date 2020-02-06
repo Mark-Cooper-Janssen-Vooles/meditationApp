@@ -1,0 +1,242 @@
+
+.meditation-player {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  .meditation-component {
+    height: 100%;
+    width: 100vw;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .message {
+      margin-bottom: 5vh;
+    }
+  }
+
+    .loading-bar {
+      // height: 240px;
+      // width: 240px;
+      height: 25vh;
+      width: 25vh;
+      // background: rgba(0, 0, 0, 0.1);
+
+      border-radius: 50%;
+
+      top: 45%;
+      position: fixed; 
+    }
+
+
+    .circlePlay {
+      // height: 200px;
+      // width: 200px;
+      height: 20.25vh;
+      width: 20.25vh;
+      border-radius: 50%;
+      background: var(--main-link-hover);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      top: 47.45%;
+      position: fixed; 
+    }
+    .circlePlay:hover {
+      cursor: pointer;
+    }
+    .circlePause {
+      // height: 200px;
+      // width: 200px;
+      height: 20.25vh;
+      width: 20.25vh;
+      border-radius: 50%;
+      background: var(--main-link-hover);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 47.45%;
+      position: fixed; 
+    }
+    .circlePause:hover {
+      cursor: pointer;
+    }
+
+  .zwrapper {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("../assets/Bground1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    .meditation_information{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 20vh;
+      .buttons{
+        width: 100vw;
+        padding: 2em;
+        display: flex;
+        justify-content: space-between;
+        .close-button {
+          z-index: 1001; 
+          
+          &:hover {
+            cursor: pointer;
+          }
+        }
+  
+
+        .skip { 
+          margin-right: 1em;  
+          &::after{
+            content: " >> " 
+          }
+          &:hover {
+            cursor: pointer;
+            // animation: skipbutton .5s ease infinite alternate;     
+            }
+          }
+        }
+      }
+    }
+        & > aside {
+          position: absolute;
+          bottom: 2em;
+          text-align: center;
+        }
+
+    .clouds {
+      position: absolute;
+      border: none;
+      left: -1vw;
+      z-index: -1;
+      height: 2em;
+    }
+    #cloud2{
+      animation: clouds 68s -35s linear infinite;
+      height: 68vh;
+      top: 10vh;
+    }
+
+    #cloud4{
+      
+      animation: clouds 108s -12s linear infinite;
+      height: 100vh;
+    }
+  }
+
+.finished-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+
+
+  .left-side {
+    width: 50%;
+    height: 100%;
+    background: var(--popup-background2);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    .left-time {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 5px;
+    }
+  }
+
+  .right-side {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--popup-background);
+    flex-direction: column;
+
+    .quote {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .complete-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+  
+      background: var(--popup-background2);
+      border-radius: 25px;
+      width: 150px;
+      height: 40px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes clouds {
+  from {
+    transform: translateX(-105%);
+  }
+  to {
+    transform: translateX(105vw);
+  }
+}
+
+@keyframes skipbutton{
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(1em);
+  }
+}
